@@ -37,7 +37,7 @@ function SignDetail() {
                 <p>Date Start: {sign.dateStart}</p>
                 <p>Date End: {sign.dateEnd}</p>
                 <p>Duality: {sign.duality}</p>
-                <p>Triplicity: {sign.triplicityId.name}</p>
+                <p>Triplicity: {sign.triplicityId}</p>
                 <p>Ruling Planet: {sign.rulingPlanet}</p>
                 <p>Motto: {sign.motto}</p>
                 <p>Polarity: {sign.polarity}</p>
