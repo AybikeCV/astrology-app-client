@@ -13,8 +13,8 @@ function AboutPage() {
 
         <p>Hi, I am Aybike.</p>
         <p>
-          Astrology is one my many interests as well as languages, building
-          legos with many others.
+          Astrology is one of my interests, as well as languages, building
+          legos and many others.
         </p>
         <p>This website project is dedicated to my interest in Astrology.</p>
         <a href="https://github.com/AybikeCV">Please visit my GitHub Profile</a>
