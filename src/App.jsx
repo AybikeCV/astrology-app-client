@@ -12,27 +12,15 @@ import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import SignDetail from "./components/SignDetail";
 import TriplicityDetail from "./components/TriplicityDetail"
+import EditComment from "./components/EditComment";
 
 import AboutPage from "./pages/AboutPage";
 import NotFound from "./pages/NotFound";
 
 import AllSignsList from "./pages/AllSignsList";
 import AllTriplicities from "./pages/AllTriplicities"
-/*import Comments from "./pages/Comments";*/
+import Comments from "./pages/Comments";
 
-
-
-/*import AllSignsList from "./pages/AllSignsList";*/
-
-/*
-
-
-
-import Comments from './pages/Comments'
-
-
-
-*/
 
 
 function App() {
@@ -44,13 +32,13 @@ function App() {
       
         <Routes>
    
-        {/*<Route path="http://localhost:5005/users/:userId" element={<UserPage />} />*/}
         <Route path="/" element={<Hero />} />
         <Route path="/signs" element={<AllSignsList />} />
         <Route path="/signs/:signId" element= {<SignDetail />} />
         <Route path="/triplicities" element={<AllTriplicities />} />
         <Route path="/triplicities/:triplicityId" element={<TriplicityDetail />} />
-       { /*<Route path="/comments" element={<Comments />} />*/}
+       <Route path="/comments" element={<Comments />} />
+       <Route path="/comments/:commentId/edit" element={<EditComment />}/>
         <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<NotFound />} />
         </Routes>

@@ -4,7 +4,9 @@ function NotFound() {
   return (
     <div className="notfound">
       <h2>404 - Page Not Found</h2>
-      <p>This page does not exist. You can observe the stars to find your way...</p>
+      <p>
+        This page does not exist. You can observe the stars to find your way...
+      </p>
     </div>
   );
 }

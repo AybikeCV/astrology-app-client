@@ -26,9 +26,9 @@ function Navbar() {
             <Link to="/triplicities">
               <li>Triplicities</li>
             </Link>
-           {/* <Link to="/comments">
+            <Link to="/comments">
               <li>Comments</li>
-            </Link> */}
+            </Link>
             <Link to="/about">
               <li>About</li>
             </Link>

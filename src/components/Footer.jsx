@@ -13,7 +13,8 @@ function Footer() {
             <div class="footer-brand">
               <h2 class="footer-logo">WebAstro</h2>
               <p class="footer-tagline">
-                Discover your cosmic story through astrology with the celestial wisdom.
+                Discover your cosmic story through astrology with the celestial
+                wisdom.
               </p>
             </div>
             <div class="footer-bottom">
