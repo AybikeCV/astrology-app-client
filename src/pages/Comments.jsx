@@ -32,7 +32,7 @@ function Comments() {
     if (!comments) return <h3 className="loading">Loading...</h3>;
 
   return (
-    <div className="commentsContainer">
+    <div className="pageContainer">
 
 
      {comments.map((eachComment) => {

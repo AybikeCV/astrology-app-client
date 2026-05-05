@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 function TriplicityCard(props) {
   return (
-    <div className="triplicityCardContainer">
+    <div className="card">
       <Link to={`/triplicities/${props.id}`}>
         <div className="triplicityCardImage">
-          <img src={props.imgUrl} style={{ height: "200px" }} />
+          <img src={props.imgUrl} style={{ height: "200px", width:"650px" }} />
         </div>
         <div className="triplicityCardInfo"></div>
       </Link>

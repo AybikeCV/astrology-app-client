@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 function SignCard(props) {
   return (
-    <div className="signCardContainer">
+    <div className="card">
       <Link to={`/signs/${props.id}`}>
-        <div className="signCardImage">
+        <div className="signcardImage">
           <img src={props.imgUrl} style={{ width: "200px" }} />
         </div>
         <div className="signCardInfo">

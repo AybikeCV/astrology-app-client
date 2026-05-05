@@ -25,7 +25,7 @@ function AllTriplicities() {
   if (!allTriplicities) return <h3 className="loading">Loading...</h3>;
 
   return (
-    <div className="allTriplicitiesContainer">
+    <div className="pageContainer">
       {allTriplicities.map((eachTriplicity) => {
         return (
           <TriplicityCard

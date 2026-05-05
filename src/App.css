@@ -249,7 +249,7 @@ background-size: cover;
 
 /*AboutPage*/
 
-.about-wrapper {
+.aboutPage {
   width: 100%;
   min-height: 75vh;
 
@@ -306,6 +306,107 @@ background-size: cover;
 .aboutme a:hover {
   color: #ffffff;
 }
+
+/*Card Classes*/
+
+.card {
+  max-width: 700px;
+  width: 100%;
+  margin: 16px auto;
+  padding: 20px;
+  border-radius: 18px;
+
+  background:
+  linear-gradient(rgba(113, 85, 69, 0.55), rgba(123, 79, 54, 0.75)),
+  url("src/assets/hero-section-bg.png");
+  border: 1px solid rgb(108, 10, 10);
+  backdrop-filter: blur(10px);
+
+  color: #d6d5c5;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(196, 28, 28, 0.3);
+}
+
+.addComment {
+  max-width: 700px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 18px;
+
+  background:   linear-gradient(rgba(113, 85, 69, 0.55), rgba(123, 79, 54, 0.75)),
+  url("src/assets/hero-section-bg.png");
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+
+  color: #f4eadc;
+}
+
+.addComment textarea,
+.addComment select,
+.addComment input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 14px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(244, 234, 220, 0.2);
+
+  background: rgba(0, 0, 0, 0.2);
+  color: #f4eadc;
+}
+
+.editComment {
+  max-width: 700px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 18px;
+ background:   
+ 
+ linear-gradient(rgba(113, 85, 69, 0.55), rgba(123, 79, 54, 0.75)),
+  url("src/assets/hero-section-bg.png");
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+
+  color: #f4eadc;
+}
+
+.editComment textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 14px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(244, 234, 220, 0.2);
+
+  background: rgba(0, 0, 0, 0.25);
+  color: #f4eadc;
+}
+
+button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  background: rgba(244, 234, 220, 0.15);
+  color: #f4eadc;
+
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: rgba(244, 234, 220, 0.25);
+  transform: scale(1.02);
+}
+
 
 /*SMALL MOBILE <480px*/
 
@@ -394,6 +495,16 @@ background-size: cover;
   .notfound p {
     font-size: 0.95rem;
   }
+   .card,
+  .addComment,
+  .editComment {
+    padding: 12px;
+  }
+
+  textarea,
+  select {
+    font-size: 14px;
+  }
 }
 
 /*MOBILE 480px - 759px*/
@@ -442,6 +553,23 @@ background-size: cover;
 
   .notfound p {
     font-size: 1rem;
+  }
+
+  .card,
+  .addComment,
+  .editComment {
+    padding: 14px;
+    max-width: 95%;
+    border-radius: 14px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  h3, h4 {
+    font-size: 16px;
   }
 }
 
@@ -496,7 +624,15 @@ background-size: cover;
   .notfound p {
     font-size: 1.05rem;
   }
+
+  .card,
+  .addComment,
+  .editComment {
+    padding: 18px;
+    max-width: 90%;
+  }
 }
+
 
 /*DESKTOP >1024px*/
 

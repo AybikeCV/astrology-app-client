@@ -22,7 +22,7 @@ function CommentCard(props) {
 
 
   return (
-    <div className="commentCard">
+    <div className="card">
 
         <h4>Comment on {props.signId}:</h4>
       

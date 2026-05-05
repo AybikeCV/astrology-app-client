@@ -58,7 +58,7 @@ function EditComment() {
       <form onSubmit={handleFormSubmit}>
         
        
-          <label>Text:</label>
+          <label></label>
         <textarea
         value={text}
           onChange={(e) => setText(e.target.value)}

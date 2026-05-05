@@ -25,7 +25,7 @@ function AllSignsList() {
   if (!allSigns) return <h3 className="loading">Loading...</h3>;
 
   return (
-    <div className="allSignsContainer">
+    <div className="pageContainer">
       {allSigns.map((eachSign) => {
         return (
           <SignCard

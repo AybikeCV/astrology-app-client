@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 function AboutPage() {
   return (
     <>
-      <div className="about-wrapper">
+      <div className="aboutPage">
         <div className="aboutme">
           <h3>About Me</h3>
 

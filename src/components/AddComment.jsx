@@ -58,7 +58,7 @@ window.location.reload()
           </select>
         )}
 
-        <label>Text:</label>
+        <label></label>
         <textarea
           type="text"
           name="text"
