@@ -66,7 +66,7 @@ window.location.reload()
           onChange={(e) => setText(e.target.value)}
         />
 
-        <button type="submit">Add a new Comment</button>
+        <button type="submit">Add New Comment</button>
 
    
       </form>

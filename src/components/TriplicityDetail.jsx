@@ -29,17 +29,17 @@ function TriplicityDetail() {
 
   return (
     <div className="triplicityDetailPage">
-      <h4>{triplicity.name}</h4>
-      <img src={triplicity.imgUrl} style={{ height: "200px" }} />
+      <h2>{triplicity.name}</h2>
+      <img className="eachTriplicity" src={triplicity.imgUrl}/>
       <p>{triplicity.description}</p>
 
-      <h5>Zodiac Signs That Belongs To This Triplicity: </h5>
+      <h4>Zodiac Signs That Belongs To This Triplicity: </h4>
       {triplicity.signs.map((eachSign) => {
         return (
           <div>
             {" "}
             <Link to={`/signs/${eachSign.id}`}>
-              <img src={eachSign.imgUrl} style={{ width: "200px" }} />
+              <img src={eachSign.imgUrl} style={{width:"200px"}} />
             </Link>
           </div>
         );

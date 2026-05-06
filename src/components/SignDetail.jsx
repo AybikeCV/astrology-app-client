@@ -33,17 +33,25 @@ function SignDetail() {
     <div className="signDetailPage">
 
       <div>
-      <h4>{sign.name}</h4>
-      <img src={sign.imgUrl} style={{ width: "200px" }} />
-      <p>Date Start: {sign.dateStart}</p>
-      <p>Date End: {sign.dateEnd}</p>
-      <p>Duality: {sign.duality}</p>
-      <p>Triplicity: {sign.triplicityId}</p>
-      <p>Ruling Planet: {sign.rulingPlanet}</p>
-      <p>Motto: {sign.motto}</p>
-      <p>Polarity: {sign.polarity}</p>
-      <p>Description: {sign.description}</p>
-
+      <h2>{sign.name}</h2>
+      <br/>
+      <img src={sign.imgUrl}/>
+      <p><b>Date Start:</b> {sign.dateStart}</p>
+<br/>
+      <p><b>Date End:</b> {sign.dateEnd}</p>
+      <br/>
+      <p><b>Duality:</b> {sign.duality}</p>
+      <br/>
+      <p><b>Triplicity:</b> {sign.triplicityId}</p>
+      <br/>
+      <p><b>Ruling Planet:</b> {sign.rulingPlanet}</p>
+      <br/>
+      <p><b>Motto:</b> {sign.motto}</p>
+      <br/>
+      <p><b>Polarity:</b> {sign.polarity}</p>
+      <br/>
+      <p><b>Description:</b> {sign.description}</p>
+<br/>
 </div>
 
 {sign.comments && sign.comments.map((comment) => {

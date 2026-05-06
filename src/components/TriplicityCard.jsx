@@ -6,7 +6,7 @@ function TriplicityCard(props) {
     <div className="card">
       <Link to={`/triplicities/${props.id}`}>
         <div className="triplicityCardImage">
-          <img src={props.imgUrl} style={{ height: "200px", width:"650px" }} />
+          <img src={props.imgUrl} />
         </div>
         <div className="triplicityCardInfo"></div>
       </Link>

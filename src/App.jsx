@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import SignDetail from "./components/SignDetail";
 import TriplicityDetail from "./components/TriplicityDetail"
 import EditComment from "./components/EditComment";
+import SearchFunction from "./components/SearchFunction";
 
 import AboutPage from "./pages/AboutPage";
 import NotFound from "./pages/NotFound";
@@ -24,10 +25,14 @@ import Comments from "./pages/Comments";
 
 
 function App() {
+
+
+  const [searchQuery, setSearchQuery] = useState("")
+
   return (
     <>
       
-      <Navbar />
+      <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
       
         <Routes>
@@ -38,8 +43,9 @@ function App() {
         <Route path="/triplicities" element={<AllTriplicities />} />
         <Route path="/triplicities/:triplicityId" element={<TriplicityDetail />} />
        <Route path="/comments" element={<Comments />} />
-       <Route path="/comments/:commentId/edit" element={<EditComment />}/>
+       <Route path="/comments/:commentId/edit" element={<EditComment />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/signs/searchresult/" element={<SearchFunction searchQuery={searchQuery} />} />
         <Route path="*" element={<NotFound />} />
         </Routes>
     

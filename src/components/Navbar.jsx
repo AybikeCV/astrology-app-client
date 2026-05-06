@@ -6,11 +6,24 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import React from "react";
 
+
 import logo from "../assets/webastro-logo.png";
 
-function Navbar() {
+function Navbar( {searchQuery, setSearchQuery} ) {
+
+
+
+const handleSearch = (e) => {
+    setSearchQuery(e.target.value)
+    navigate("/signs/searchresult")
+}
+
+const navigate = useNavigate()
+
   return (
     <>
+
+   
       <nav className="navbar">
         <div className="nav-container">
           <div className="web-logo">
@@ -35,10 +48,8 @@ function Navbar() {
           </ul>
 
           <div className="nav-searchbar">
-            <input type="text" placeholder="search"></input>
-            <button className="search-btn" type="submit">
+            <input  onChange={handleSearch} value={searchQuery} type="text" placeholder="search..."></input>
               Search
-            </button>
           </div>
         </div>
       </nav>
