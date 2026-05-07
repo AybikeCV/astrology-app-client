@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import AddComment from "./AddComment";
 import CommentCard from "./CommentCard";
 
-function SignDetail() {
+function SignDetail({ toggleFav, favSigns }) {
   const { signId } = useParams();
 
   const [sign, setSign] = useState(null);
@@ -28,7 +28,7 @@ function SignDetail() {
   };
 
   if (!sign) return <h3 className="loading">Loading ...</h3>;
-
+  const isFav = favSigns.some((s) => s.id === sign.id);
   return (
     <div className="signDetailPage">
       <div>
@@ -67,6 +67,10 @@ function SignDetail() {
           <b>Description:</b> {sign.description}
         </p>
         <br />
+
+        <button onClick={() => toggleFav(sign)}>
+          {isFav ? "⭐ Remove from Favorites" : "☆ Add to Favorites"}
+        </button>
       </div>
 
       {sign.comments &&
@@ -76,14 +80,14 @@ function SignDetail() {
 
       <AddComment signId={sign.id} getData={getSignData} />
 
-       <div>
-          <h4>
-            <Link to="/">Go to HomePage</Link>
-          </h4>
-        </div>
+      <div>
+        <h4>
+          <Link to="/signs">Go to All 12 Zodiac Signs</Link>
+          <br />
+          <Link to="/">Go to HomePage</Link>
+        </h4>
+      </div>
     </div>
-
-    
   );
 }
 

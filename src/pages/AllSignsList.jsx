@@ -3,13 +3,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import SignCard from "../components/SignCard";
 
-function AllSignsList() {
+function AllSignsList({ toggleFav, favSigns }) {
   const [allSigns, setAllSigns] = useState(null);
-
-const [favSigns, setFavSigns] = useState([])
-console.log(favSigns)
-
-
 
   useEffect(() => {
     getSignData();
@@ -27,28 +22,14 @@ console.log(favSigns)
     }
   };
 
-  if (!allSigns) return <h3 className="loading">Loading...</h3>;
-
-
-const handleAddToFavourite = (sign) => {
-    console.log("adding to fav")
-
-    const clone = structuredClone(favSigns)
-
+  if (!allSigns) {
+    return (
+      <div className="loadingContainer">
+        <div className="spinner"></div>
+        <p>Loading...</p>
+      </div>
+    );
   }
-
-  const handleRemoveFromFav = (id) => {
-    console.log("trying to remove", index )
-
-
-    const clone = structuredClone(favSigns)
-    clone.splice(index, 1)
-    setFavSigns(clone)
-  }
-
-
-
-
 
   return (
     <div className="pageContainer">
@@ -59,13 +40,11 @@ const handleAddToFavourite = (sign) => {
             key={eachSign.id}
             allSigns={allSigns}
             {...eachSign}
+            toggleFav={toggleFav}
+            isFav={favSigns.some((sign) => sign.id === eachSign.id)}
           />
         );
       })}
-
-
-
-
     </div>
   );
 }

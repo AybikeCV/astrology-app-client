@@ -22,7 +22,14 @@ function AllTriplicities() {
     }
   };
 
-  if (!allTriplicities) return <h3 className="loading">Loading...</h3>;
+  if (!allTriplicities) {
+    return (
+      <div className="loadingContainer">
+        <div className="spinner"></div>
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="pageContainer">

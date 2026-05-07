@@ -48,7 +48,6 @@ function Navbar({ searchQuery, setSearchQuery }) {
               type="text"
               placeholder="search..."
             ></input>
-            Search
           </div>
         </div>
       </nav>

@@ -9,8 +9,8 @@ function Comments() {
   const [comments, setComments] = useState(null);
 
   const addNewComment = (newComment) => {
-    setComments((prev) => [...prev, newComment])
-  }
+    setComments((prev) => [...prev, newComment]);
+  };
 
   useEffect(() => {
     getCommentData();
@@ -28,8 +28,14 @@ function Comments() {
     }
   };
 
-  if (!comments) return <h3 className="loading">Loading...</h3>;
-
+  if (!comments) {
+    return (
+      <div className="loadingContainer">
+        <div className="spinner"></div>
+        <p>Loading...</p>
+      </div>
+    );
+  }
   return (
     <div className="pageContainer">
       {comments.map((eachComment) => {
@@ -44,7 +50,7 @@ function Comments() {
         );
       })}
 
-      <AddComment addNewComment={addNewComment}/>
+      <AddComment addNewComment={addNewComment} />
     </div>
   );
 }

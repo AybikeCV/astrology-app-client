@@ -25,8 +25,8 @@ function AddComment(props) {
       setSelectSign("");
       setText("");
       navigate("/comments");
-      props.addNewComment(response.data)
-      //window.location.reload(); used temporarily during checking comment-update-status// 
+      props.addNewComment(response.data);
+      //window.location.reload(); used temporarily during checking comment-update-status//
     } catch (error) {
       console.log(error);
     }
@@ -56,7 +56,6 @@ function AddComment(props) {
             <option value="Pisces">Pisces</option>
           </select>
         )}
-
 
         <label id="label"></label>
         <textarea

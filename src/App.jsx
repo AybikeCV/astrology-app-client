@@ -25,14 +25,39 @@ import Comments from "./pages/Comments";
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
 
+  const [favSigns, setFavSigns] = useState([]);
+  console.log(favSigns);
+
+  const handleToggleFavorite = (sign) => {
+    const favAdded = favSigns.find((s) => s.id === sign.id);
+    if (favAdded) {
+      setFavSigns(favSigns.filter((s) => s.id !== sign.id));
+    } else {
+      setFavSigns([...favSigns, sign]);
+    }
+  };
+
   return (
     <>
       <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
       <Routes>
         <Route path="/" element={<Hero />} />
-        <Route path="/signs" element={<AllSignsList />} />
-        <Route path="/signs/:signId" element={<SignDetail />} />
+        <Route
+          path="/signs"
+          element={
+            <AllSignsList
+              toggleFav={handleToggleFavorite}
+              favSigns={favSigns}
+            />
+          }
+        />
+        <Route
+          path="/signs/:signId"
+          element={
+            <SignDetail toggleFav={handleToggleFavorite} favSigns={favSigns} />
+          }
+        />
         <Route path="/triplicities" element={<AllTriplicities />} />
         <Route
           path="/triplicities/:triplicityId"

@@ -21,10 +21,13 @@ function SearchFunction({ searchQuery, setSearchQuery }) {
     }
   };
 
-  if (!allSigns) return <h3 className="loading">Loading...</h3>;
-
-  if (!searchQuery) {
-    return <p>Type to search...</p>;
+  if (!allSigns) {
+    return (
+      <div className="loadingContainer">
+        <div className="spinner"></div>
+        <p>Loading...</p>
+      </div>
+    );
   }
 
   return (
