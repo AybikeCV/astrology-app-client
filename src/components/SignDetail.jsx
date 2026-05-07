@@ -31,39 +31,59 @@ function SignDetail() {
 
   return (
     <div className="signDetailPage">
-
       <div>
-      <h2>{sign.name}</h2>
-      <br/>
-      <img src={sign.imgUrl}/>
-      <p><b>Date Start:</b> {sign.dateStart}</p>
-<br/>
-      <p><b>Date End:</b> {sign.dateEnd}</p>
-      <br/>
-      <p><b>Duality:</b> {sign.duality}</p>
-      <br/>
-      <p><b>Triplicity:</b> {sign.triplicityId}</p>
-      <br/>
-      <p><b>Ruling Planet:</b> {sign.rulingPlanet}</p>
-      <br/>
-      <p><b>Motto:</b> {sign.motto}</p>
-      <br/>
-      <p><b>Polarity:</b> {sign.polarity}</p>
-      <br/>
-      <p><b>Description:</b> {sign.description}</p>
-<br/>
-</div>
+        <h2>{sign.name}</h2>
+        <br />
+        <img src={sign.imgUrl} />
+        <p>
+          <b>Date Start:</b> {sign.dateStart}
+        </p>
+        <br />
+        <p>
+          <b>Date End:</b> {sign.dateEnd}
+        </p>
+        <br />
+        <p>
+          <b>Duality:</b> {sign.duality}
+        </p>
+        <br />
+        <p>
+          <b>Triplicity:</b> {sign.triplicityId}
+        </p>
+        <br />
+        <p>
+          <b>Ruling Planet:</b> {sign.rulingPlanet}
+        </p>
+        <br />
+        <p>
+          <b>Motto:</b> {sign.motto}
+        </p>
+        <br />
+        <p>
+          <b>Polarity:</b> {sign.polarity}
+        </p>
+        <br />
+        <p>
+          <b>Description:</b> {sign.description}
+        </p>
+        <br />
+      </div>
 
-{sign.comments && sign.comments.map((comment) => {
-        return <CommentCard key={comment.id} comment={comment}/>
-      })}
+      {sign.comments &&
+        sign.comments.map((comment) => {
+          return <CommentCard key={comment.id} comment={comment} />;
+        })}
 
-   
-      <AddComment signId={sign.id} getData={getSignData}/>
+      <AddComment signId={sign.id} getData={getSignData} />
+
+       <div>
+          <h4>
+            <Link to="/">Go to HomePage</Link>
+          </h4>
+        </div>
+    </div>
 
     
-
-    </div>
   );
 }
 

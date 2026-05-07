@@ -5,8 +5,7 @@ import { useNavigate } from "react-router-dom";
 function AddComment(props) {
   const [selectSign, setSelectSign] = useState("");
   const [text, setText] = useState("");
- const navigate = useNavigate()
-
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,9 +24,9 @@ function AddComment(props) {
       console.log("comment created");
       setSelectSign("");
       setText("");
-      navigate("/comments")
-window.location.reload()
-      
+      navigate("/comments");
+      props.addNewComment(response.data)
+      //window.location.reload(); used temporarily during checking comment-update-status// 
     } catch (error) {
       console.log(error);
     }
@@ -58,6 +57,7 @@ window.location.reload()
           </select>
         )}
 
+
         <label></label>
         <textarea
           type="text"
@@ -67,8 +67,6 @@ window.location.reload()
         />
 
         <button type="submit">Add New Comment</button>
-
-   
       </form>
     </div>
   );

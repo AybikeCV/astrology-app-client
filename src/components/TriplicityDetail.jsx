@@ -30,7 +30,7 @@ function TriplicityDetail() {
   return (
     <div className="triplicityDetailPage">
       <h2>{triplicity.name}</h2>
-      <img className="eachTriplicity" src={triplicity.imgUrl}/>
+      <img className="eachTriplicity" src={triplicity.imgUrl} />
       <p>{triplicity.description}</p>
 
       <h4>Zodiac Signs That Belongs To This Triplicity: </h4>
@@ -39,7 +39,7 @@ function TriplicityDetail() {
           <div>
             {" "}
             <Link to={`/signs/${eachSign.id}`}>
-              <img src={eachSign.imgUrl} style={{width:"200px"}} />
+              <img src={eachSign.imgUrl} style={{ width: "200px" }} />
             </Link>
           </div>
         );

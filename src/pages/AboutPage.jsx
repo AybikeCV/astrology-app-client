@@ -15,10 +15,12 @@ function AboutPage() {
             Astrology is one of my interests, as well as languages, building
             legos and many others.
           </p>
+
           <p>This website project is dedicated to my interest in Astrology.</p>
-          <a href="https://github.com/AybikeCV">
-            Please visit my GitHub Profile
-          </a>
+          <p> Please visit my GitHub and LinkedIn:</p>
+          <a href="https://github.com/AybikeCV">GitHub Profile</a>
+          <br/>
+          <a href="https://www.linkedin.com/in/aybike-celebi-visser-6b9003106/">LinkedIn Profile</a>
         </div>
       </div>
     </>

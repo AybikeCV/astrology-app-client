@@ -3,13 +3,14 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import CommentCard from "../components/CommentCard";
 
-import AddComment from "../components/AddComment"
-
+import AddComment from "../components/AddComment";
 
 function Comments() {
   const [comments, setComments] = useState(null);
 
-
+  const addNewComment = (newComment) => {
+    setComments((prev) => [...prev, newComment])
+  }
 
   useEffect(() => {
     getCommentData();
@@ -27,15 +28,11 @@ function Comments() {
     }
   };
 
-    
- 
-    if (!comments) return <h3 className="loading">Loading...</h3>;
+  if (!comments) return <h3 className="loading">Loading...</h3>;
 
   return (
     <div className="pageContainer">
-
-
-     {comments.map((eachComment) => {
+      {comments.map((eachComment) => {
         return (
           <CommentCard
             className="commentCard"
@@ -46,13 +43,8 @@ function Comments() {
           />
         );
       })}
-     
-         
-   <AddComment />
 
-
-
-    
+      <AddComment addNewComment={addNewComment}/>
     </div>
   );
 }
