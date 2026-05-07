@@ -11,7 +11,7 @@ body {
 
   background-image:
     linear-gradient(rgba(38, 28, 20, 0.45), rgba(38, 28, 20, 0.55)),
-    url("src/assets/hero-section-bg.png");
+    url('/hero-section-bg.png');
 }
 
 /*Navbar*/
@@ -118,7 +118,7 @@ body {
 
   background-image:
     linear-gradient(rgba(38, 28, 20, 0.45), rgba(38, 28, 20, 0.55)),
-    url("src/assets/hero-section-bg.png");
+    url('/hero-section-bg.png');
 
   background-size: cover;
   background-position: center;
@@ -231,7 +231,7 @@ body {
 
   background-image:
     linear-gradient(rgba(38, 28, 20, 0.45), rgba(38, 28, 20, 0.55)),
-    url("src/assets/hero-section-bg.png");
+    url('/hero-section-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -269,7 +269,7 @@ body {
 
   background:
     linear-gradient(rgba(25, 18, 14, 0.55), rgba(25, 18, 14, 0.75)),
-    url("src/assets/hero-section-bg.png");
+    url('/hero-section-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -332,7 +332,7 @@ body {
 
   background:
     linear-gradient(rgba(113, 85, 69, 0.55), rgba(123, 79, 54, 0.75)),
-    url("src/assets/hero-section-bg.png");
+    url('/hero-section-bg.png');
   border: 1px solid rgba(224, 195, 90, 0.612);
   backdrop-filter: blur(10px);
 
@@ -377,7 +377,7 @@ body {
 
   background:
     linear-gradient(rgba(113, 85, 69, 0.55), rgba(123, 79, 54, 0.75)),
-    url("src/assets/hero-section-bg.png");
+    url('/hero-section-bg.png');
   border: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(10px);
 
@@ -411,7 +411,7 @@ option {
   border-radius: 18px;
   background:
     linear-gradient(rgba(113, 85, 69, 0.55), rgba(123, 79, 54, 0.75)),
-    url("src/assets/hero-section-bg.png");
+    url('/hero-section-bg.png');
 
   border: 1px solid rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
@@ -451,12 +451,13 @@ button:hover {
 
 /* search */
 .searchResult h4 {
+  
   text-align: center;
 }
 /* loading */
 
 .loading {
-  display: flex;
+  display: block;
   justify-content: center;
   align-content: center;
   height: 60px;
@@ -475,6 +476,7 @@ button:hover {
 }
 
 loading h3 {
+  display:block;
   text-align: center;
 }
 

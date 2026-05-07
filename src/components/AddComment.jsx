@@ -35,7 +35,7 @@ function AddComment(props) {
   return (
     <div className="addComment">
       <h3>Add New Comment</h3>
-      <form onSubmit={handleSubmit}>
+      <form id="form" onSubmit={handleSubmit}>
         {!props.signId && (
           <select
             value={selectSign}
@@ -58,7 +58,7 @@ function AddComment(props) {
         )}
 
 
-        <label></label>
+        <label id="label"></label>
         <textarea
           type="text"
           name="text"
