@@ -701,6 +701,11 @@ button:hover {
   }
 }
 
+a {
+  text-decoration: none;
+  color:#bcb2a2
+}
+
 /*TABLET 760px - 1023px*/
 
 @media (min-width: 760px) and (max-width: 1023px) {
