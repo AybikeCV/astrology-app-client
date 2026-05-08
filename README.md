@@ -14,7 +14,7 @@
 
 ## Technologies, Libraries & APIs used
 
-HTML, CSS, JavaScript, React, axios, React Router, Vite
+HTML, CSS, JavaScript, React, axios, React Router, Vite , Package.json , node.js. Postman
 
 PhotoPea.com and AI for images and image editing
 
