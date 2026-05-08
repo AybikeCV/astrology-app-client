@@ -26,7 +26,9 @@ function AddComment(props) {
       setText("");
       navigate("/comments");
       props.addNewComment(response.data);
-      //window.location.reload(); used temporarily during checking comment-update-status//
+      {
+        /*window.location.reload(); used temporarily during checking addComment-update-status*/
+      }
     } catch (error) {
       console.log(error);
     }
@@ -36,6 +38,7 @@ function AddComment(props) {
     <div className="addComment">
       <h3>Add New Comment</h3>
       <form id="form" onSubmit={handleSubmit}>
+        {/* used to avoid to see on the signdetail page*/}
         {!props.signId && (
           <select
             value={selectSign}

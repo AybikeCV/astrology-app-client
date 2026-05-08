@@ -10,6 +10,9 @@ function Comments() {
 
   const addNewComment = (newComment) => {
     setComments((prev) => [...prev, newComment]);
+    {
+      /*used for seeing the added comment directly on the page without resfreshing*/
+    }
   };
 
   useEffect(() => {

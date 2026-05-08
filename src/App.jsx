@@ -23,7 +23,6 @@ import AllTriplicities from "./pages/AllTriplicities";
 import Comments from "./pages/Comments";
 
 function App() {
-  
   const [searchQuery, setSearchQuery] = useState("");
 
   const [favSigns, setFavSigns] = useState([]);

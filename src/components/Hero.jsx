@@ -8,6 +8,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function Hero() {
+  {
+    /* Prop-drill for the bonus func /next time need to use context for all signs db */
+  }
+
   const [allSigns, setAllSigns] = useState([]);
 
   const [birthDate, setBirthDate] = useState("");
@@ -31,33 +35,40 @@ function Hero() {
 
   const findSign = () => {
     const date = new Date(birthDate);
-    const day = String(date.getDate()).padStart(2, "0");   //needed it to convert number to match my db dateStart/dateEnd info//also add a zero if number has only one digit "05-04"
-    const month = String(date.getMonth() + 1).padStart(2, "0"); //month index starts from zero
-    const formatted = `${day}-${month}`; 
+    const day = String(date.getDate()).padStart(2, "0");
+    {
+      /*needed it to convert number to match my db dateStart/dateEnd info*/
+    }
+    {
+      /*also padStart to add 0 if number has only one digit "05-04"*/
+    }
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    {
+      /* month index starts from zero*/
+    }
+    const formatted = `${day}-${month}`;
 
- const found = allSigns.find((sign) => {
-  const current = Number(formatted.split("-").reverse().join("")); // then convert to numbers for comparison // string comparison did not work accurately gave same sign// 0504
+    const found = allSigns.find((sign) => {
+      const current = Number(formatted.split("-").reverse().join(""));
+      {
+        /*convert to numbers for the accurate comparison 0504*/
+      }
+      const start = Number(sign.dateStart.split("-").reverse().join(""));
 
-  const start = Number(
-    sign.dateStart.split("-").reverse().join("")
-  );
+      const end = Number(sign.dateEnd.split("-").reverse().join(""));
 
-  const end = Number(
-    sign.dateEnd.split("-").reverse().join("")
-  );
+      if (start <= end) {
+        return current >= start && current <= end;
+      } else {
+        {
+          /* else is for capricorn since year wraps*/
+        }
+        return current >= start || current <= end;
+      }
+    });
 
-  if (start <= end) {
-    return current >= start && current <= end;
-  } else {
-    return current >= start || current <= end;
-  }
-  });
-
-  setResult(found);
-};
-
-
-  
+    setResult(found);
+  };
 
   return (
     <>
@@ -73,17 +84,20 @@ function Hero() {
               yourself through astrology in a calm and beautiful space.
             </p>
             <input
-              type="date"
+              type="text"
+              placeholder="MM-DD"
               value={birthDate}
-              min="1940-01-01"
-              max="2026-12-31"
               onChange={(e) => setBirthDate(e.target.value)}
             />
-            <button onClick={findSign}>Select Your Birthday to Find Your Zodiac Sign</button>
+            <button onClick={findSign}>
+              Enter Your Birth Date to Find Your Zodiac Sign
+            </button>
             {result && (
               <div>
                 <h2>{result.name}</h2>
-                 <Link to={`/signs/${result.id}`}><img src={result.imgUrl} /></Link>
+                <Link to={`/signs/${result.id}`}>
+                  <img src={result.imgUrl} />
+                </Link>
               </div>
             )}
           </div>
