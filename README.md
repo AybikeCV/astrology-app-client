@@ -22,7 +22,7 @@ AI for simplyfying the explanations of using dates with functions to better unde
 
 ## Backlog Functionalities
 
-I only connected zodiac signs to their triplicity(element) property and comments, however, they can also connect with duality and quadriplicity(quality) properties too.
+I connected only zodiac signs to their triplicity(element) property and comments, however, they can also connect with duality and quadriplicity(quality) properties too.
 I think, search, and CRUD functions, especially Create and Update could be improved.
 
 Learn your sign function (As a Bonus) is also can be improved, and since it was a new function for me working with dates, I had struggles. To start with a functionality with no background experience is really difficult and it resulted with extra coding than I thought. I read tutorials, and some points asked advices to AI on advices to simplifications and explanations.
